@@ -46,12 +46,12 @@ public class Sortieren {
 			z++;
 			for (int j = 1; j < feld.length-i; j++) {
 				z++;
+				v++;
 				if(feld[j] > feld[j+1]) {
-					v++;
+					t++;
 					int help = feld[j];
 					feld[j] = feld[j+1];
 					feld[j+1] = help;
-					t++;
 				}
 			}
 		}
@@ -92,8 +92,8 @@ public class Sortieren {
 				v++;
 				lauf = lauf - 1;
 				z++;
+				v++;
 				if (feld[stelle] < feld[lauf]) {
-					v++;
 					int help = feld[stelle];
 					feld[stelle] = feld[lauf];
 					feld[lauf] = help;
@@ -106,22 +106,41 @@ public class Sortieren {
 	}
 
 	public void quickSort(int links, int rechts) {
+		v++;
 		if(rechts > links) {
+			z++;
 			int p = feld[(rechts + links) / 2];
+			z++;
 			int l = links;
+			z++;
 			int r = rechts;
 			do {
+				v++;
+
+				v++;
 				while (feld[l] < p) {
+					v++;
+
+					z++;
 					l++;
 				}
+				v++;
 				while (feld[r] > p) {
+					v++;
+
+					z++;
 					r--;
 				}
+				v++;
 				if(l <= r) {
+
+					t++;
 					int help = feld[l];
 					feld[l] = feld[r];
 					feld[r] = help;
+					z++;
 					l++;
+					z++;
 					r--;
 				}
 			} while (!(l > r));
@@ -157,27 +176,47 @@ public class Sortieren {
 	}
 
 	public void shakerSort() {
+		z++;
 		boolean aenderung = true;
+		z++;
 		boolean hin = true;
+
+		v++;
 		while (aenderung) {
+			v++;
+
+			z++;
 			aenderung = false;
+
+			v++;
 			if(hin) {
+				z++;
 				hin = false;
 				for (int i = 1; i < feld.length-1; i++) {
+					z++;
+
+					v++;
 					if(feld[i + 1] < feld[i]) {
+						t++;
 						int hilf = feld[i];
 						feld[i] = feld[i+1];
 						feld[i+1] = hilf;
+						z++;
 						aenderung = true;
 					}
 				}
 			} else {
+				z++;
 				hin = true;
 				for (int i = feld.length-1; i >= 2; i--) {
+					z++;
+					v++;
 					if(feld[i] < feld[i-1]) {
+						t++;
 						int hilf = feld[i];
 						feld[i] = feld[i-1];
 						feld[i-1] = hilf;
+						z++;
 						aenderung = true;
 					}
 				}

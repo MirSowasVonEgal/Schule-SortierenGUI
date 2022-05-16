@@ -67,8 +67,8 @@ public class SortierenGUI extends JFrame {
 
 		});
 
-		JLabel lblNewLabel = new JLabel("Welche Zahlen willst du sortieren?");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		JLabel lblNewLabel = new JLabel("Welche Zahlen willst du sortieren? (Zahlen durch ein Leerzeichen trennen)");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setBounds(10, 57, 564, 24);
 		contentPane.add(lblNewLabel);
 
@@ -163,6 +163,8 @@ public class SortierenGUI extends JFrame {
 		lblSortiertenZahlen_1_3.setText("Gesamtzuweisungen: " + (sortieren.getZ() + 3 * sortieren.getT()));
 
 		textField_1.setText(arrayToString(feld));
+
+		String[] ee = "sdd".split(" ");
 	}
 
 	private int[] changeArrayType(String[] value) {
